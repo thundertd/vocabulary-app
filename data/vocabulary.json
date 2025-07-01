@@ -1,0 +1,26 @@
+[
+  {
+    "id": "apple",
+    "english": "apple",
+    "vietnamese": "quả táo",
+    "pronunciation": "/ˈæpl/",
+    "image": "assets/images/apple.png",
+    "audio": "assets/audio/apple.mp3"
+  },
+  {
+    "id": "banana",
+    "english": "banana",
+    "vietnamese": "quả chuối",
+    "pronunciation": "/bəˈnænə/",
+    "image": "assets/images/banana.png",
+    "audio": "assets/audio/banana.mp3"
+  },
+  {
+    "id": "orange",
+    "english": "orange",
+    "vietnamese": "quả cam",
+    "pronunciation": "/ˈɔrɪndʒ/",
+    "image": "assets/images/orange.png",
+    "audio": "assets/audio/orange.mp3"
+  }
+] 
