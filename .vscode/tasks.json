@@ -1,0 +1,67 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "dev-server",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "build-electron",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build:electron"
+			],
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "electron-dev",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"electron:dev"
+			],
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "start-electron-only",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"electron",
+				"."
+			],
+			"group": "build",
+			"dependsOn": "build-electron",
+			"problemMatcher": [],
+			"options": {
+				"env": {
+					"NODE_ENV": "development"
+				}
+			}
+		},
+		{
+			"label": "start-app-complete",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"dev-server",
+				"start-electron-only"
+			],
+			"group": "build",
+			"problemMatcher": []
+		}
+	]
+}
